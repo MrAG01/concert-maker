@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Concert maker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+
+
+<div class="dropping_menu">
+    <a class="dropping_menu_buttons" href="/space">Пространство</a>
+    <a class="dropping_menu_buttons" href="/poster">Афиша</a>
+    <a class="dropping_menu_buttons" href="/rents">Аренда</a>
+    <a class="dropping_menu_buttons" href="/gallery">Галерея</a>
+    <a class="dropping_menu_buttons" href="/guests">Гостям</a>
+    <a class="dropping_menu_buttons" href="/contacts">Контакты</a>
+</div>
+
+
+<div class="main_page">
+    <h1 class="title">CONCERT MAKER</h1>
+    <p class="lower_title">Ведущий сервис для просмотра ближайших концертов</p>
+
+    <div class="performing_card_base">
+        <img src="static/images/con1.jpg" alt="Preview image" class="performing_card_image">
+        <div class="performing_card_title">Пошумим блин</div>
+        <div class="performing_card_description">Самый лучший концерт в мире, именно здесь соберутся все известные звёзды мира. Таки как: MrBeast, T-series, Jeffry Epstein и множество других!</div>
+
+        <a class="performing_card_button">Подробнее</a>
+    </div>
+
+</div>
+
+
+</body>
+</html>
