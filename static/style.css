@@ -1,0 +1,36 @@
+html {
+    background-color: rgb(10, 10, 10);
+    font-family: Lucida Console;
+}
+
+.dropping_menu {
+    position: fixed;
+    background-color: rgb(18, 18, 18);
+    width: 20%;
+    height: 100vh;
+    color: white;
+    left: 0;
+    top: 0;
+}
+
+.dropping_menu_buttons {
+    text-decoration: none;
+    text-align: center;
+    color: rgb(150, 150, 150);
+    font-size: 40px;
+
+    height: 16.66666666666667%;
+    width: 100%;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(20, 20, 20);
+}
+
+.dropping_menu_buttons:hover {
+    background-color: rgb(80, 80, 80);
+    color: rgb(40, 40, 40);
+    padding-left: 30px;
+}
