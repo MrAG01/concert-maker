@@ -1,25 +1,10 @@
-.main_page{
-   padding-left: 21%;
-}
-
-.lower_title {
-    color: rgb(200, 200, 200);
-    font-size: 38px;
-}
-
-.title {
-    color: rgb(255, 255, 255);
-    padding-top: 5px;
-    padding-lower: 10px;
-    font-size: 76px;
-}
 
 @keyframes move_left {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(calc(-750px - 70px) * 3));
+        transform: translateX(calc(calc(-500px - 30px) * 3));
     }
 }
 
@@ -39,15 +24,15 @@
 
 .performing_card_base {
     flex-shrink: 0;
-    width: 750px;
-    height: 620px;
+    width: 500px;
+    height: 413px;
     background-color: rgb(20, 20, 20);
-    border-radius: 20px;
+    border-radius: 13px;
     transition: 0.2s;
 
     animation: move_left 15s linear infinite;
 
-    padding: 20px;
+    padding: 13px;
 }
 
 .performing_card_base:hover {
@@ -55,32 +40,32 @@
 }
 
 .performing_card_image {
-    border-radius: 20px;
+    border-radius: 13px;
     width: 100%;
-    height: 350px;
+    height: 233px;
 }
 
 .performing_card_title {
     color: rgb(200, 200, 200);
-    padding-top: 10px;
-    font-size: 48px;
-    height: 45px;
+    padding-top: 7px;
+    font-size: 32px;
+    height: 30px;
 }
 
 .performing_card_description {
     color: rgb(150, 150, 150);
-    padding-top: 10px;
-    font-size: 23px;
-    height: 105px;
+    padding-top: 7px;
+    font-size: 15px;
+    height: 70px;
 }
 
 .performing_card_metadata {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 40px;
+    height: 27px;
     color: rgb(160, 160, 140);
-    font-size: 28px;
+    font-size: 19px;
     text-align: center;
 }
 
@@ -96,12 +81,12 @@
     text-decoration: none;
     text-align: center;
     color: rgb(200, 200, 200);
-    font-size: 40px;
+    font-size: 27px;
     background-color: rgb(40, 80, 40);
     width: 100%;
-    height: 50px;
+    height: 33px;
 
-    border-radius: 20px;
+    border-radius: 13px;
     transition: 0.2s;
     display: flex;
     align-items: center;
@@ -111,4 +96,36 @@
 .performing_card_button:hover {
     background-color: rgb(30, 60, 30);
     color: rgb(170, 170, 170);
+}
+
+.create_announcement_wrapper {
+    margin-top: 20px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create_announcement {
+    width: 40%;
+    border-radius: 30px;
+    height: 100%;
+
+    font-size: 40px;
+
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgb(200, 200, 200);
+    background-color: rgb(20, 80, 20);
+    transition: 0.2s;
+}
+
+.create_announcement:hover {
+    background-color: rgb(10, 60, 10);
+    color: rgb(200, 200, 200);
 }

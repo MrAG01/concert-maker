@@ -1,7 +1,9 @@
-from flask import Flask, request, render_template
-from resources import *
+from flask import Flask, render_template
+
+from concerts_database import DataBase
 
 app = Flask(__name__)
+database = DataBase()
 
 
 @app.route("/rents")
@@ -36,14 +38,14 @@ def contacts_page():
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    concerts = database.get_closest_concerts()
+    return render_template("index.html", concerts=concerts)
 
 
 """@app.route("/style/<name>")
 def style(name):
     
     return get_style(name)"""
-
 
 if __name__ == "__main__":
     app.run(host="localhost", port=80, debug=True)

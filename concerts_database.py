@@ -1,6 +1,7 @@
 import hashlib
 import sqlite3
 
+
 class DataBase:
     def __init__(self, database_path="database.db"):
         self.connection = sqlite3.connect(database_path)
@@ -49,6 +50,31 @@ class DataBase:
                     )
                 """)
 
+    def get_closest_concerts(self):
+        return [
+            {
+                "image": "static/images/con1.jpg",
+                "name": "Пошумим блин",
+                "description": "Самый лучший концерт в мире, именно здесь соберутся все известные звёзды мира. Таки как: MrBeast, T-series, Jeffry Epstein и множество других!",
+                "date": "3.03.2026",
+                "cost": "от 3500р"
+            },
+            {
+                "image": "static/images/s2.jpg",
+                "name": "Ееее роо-ок",
+                "description": "Ееееееееееееееееееееееееее роооооооооок",
+                "date": "Через 3 дня",
+                "cost": "Бесплатно"
+            },
+            {
+                "image": "static/images/s3.png",
+                "name": "𓅃𓉔𓇌, 𓇋𓅓 𓎼𓄿𓇌",
+                "description": "𓆑𓇋𓈖𓄿𓃭𓃭𓇌 𓇋 𓎼𓏏 𓃀𓄿𓈖𓈖𓂧!! 𓇌𓅲𓉔. 𓇋𓅓 𓎼𓄿𓇌, 𓇋 𓃭𓆯 𓃀𓇌𓋴",
+                "date": "Уже идёт",
+                "cost": "от 8000р"
+            }
+        ]
+
     def add_user(self, userdata, artist_data=None):
         try:
             username = userdata["username"]
@@ -62,11 +88,10 @@ class DataBase:
             photo = userdata.get("photo")
             email = userdata.get("email")
 
-
-            #self.cursor.execute("""
+            # self.cursor.execute("""
             #    INSERT INTO executors (name, group_id, description, birthday, gender, likes)
             #    VALUES (?, ?, ?, ?, ?, ?);
-            #""", (name, group_id, description, birthday, gender, likes))
+            # """, (name, group_id, description, birthday, gender, likes))
 
         except KeyError:
             return

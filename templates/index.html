@@ -11,99 +11,51 @@
 <div class="main_page">
     <h1 class="title">Concert maker</h1>
     <p class="lower_title">Ведущий сервис для просмотра ближайших концертов</p>
+
     <div class="performing_card_space">
 
-
+        {% for concert in concerts %}
         <div class="performing_card_base">
-            <img src="static/images/con1.jpg" alt="Preview image" class="performing_card_image">
-            <div class="performing_card_title">Пошумим блин</div>
-            <div class="performing_card_description">Самый лучший концерт в мире, именно здесь соберутся все известные звёзды мира. Таки как: MrBeast, T-series, Jeffry Epstein и множество других!</div>
+            <img src="{{concert.image}}" alt="Preview image" class="performing_card_image">
+            <div class="performing_card_title">{{concert.name}}</div>
+            <div class="performing_card_description">{{concert.description}}</div>
             <div class="performing_card_metadata">
-                <div class="performing_card_date">3.03.2026</div>
-                <div class="performing_card_cost">От 3500р</div>
+                <div class="performing_card_date">{{concert.date}}</div>
+                <div class="performing_card_cost">{{concert.cost}}</div>
             </div>
             <a class="performing_card_button">Подробнее</a>
         </div>
+        {% endfor %}
 
+        {% for concert in concerts %}
         <div class="performing_card_base">
-            <img src="static/images/s2.jpg" alt="Preview image" class="performing_card_image">
-            <div class="performing_card_title">Ееее роо-ок</div>
-            <div class="performing_card_description">Ееееееееееееееееееееееееее роооооооооок</div>
+            <img src="{{concert.image}}" alt="Preview image" class="performing_card_image">
+            <div class="performing_card_title">{{concert.name}}</div>
+            <div class="performing_card_description">{{concert.description}}</div>
             <div class="performing_card_metadata">
-                <div class="performing_card_date">Через 3 дня</div>
-                <div class="performing_card_cost">Бесплатно</div>
+                <div class="performing_card_date">{{concert.date}}</div>
+                <div class="performing_card_cost">{{concert.cost}}</div>
             </div>
             <a class="performing_card_button">Подробнее</a>
         </div>
-
-        <div class="performing_card_base">
-            <img src="static/images/s3.png" alt="Preview image" class="performing_card_image">
-            <div class="performing_card_title">𓅃𓉔𓇌, 𓇋𓅓 𓎼𓄿𓇌</div>
-            <div class="performing_card_description">𓆑𓇋𓈖𓄿𓃭𓃭𓇌 𓇋 𓎼𓏏 𓃀𓄿𓈖𓈖𓂧!! 𓇌𓅲𓉔. 𓇋𓅓 𓎼𓄿𓇌, 𓇋 𓃭𓆯 𓃀𓇌𓋴</div>
-            <div class="performing_card_metadata">
-                <div class="performing_card_date">Уже идёт</div>
-                <div class="performing_card_cost">от 8000р</div>
-            </div>
-            <a class="performing_card_button">Подробнее</a>
-        </div>
-
-
-
-
-
-
-
-
-        <div class="performing_card_base">
-            <img src="static/images/con1.jpg" alt="Preview image" class="performing_card_image">
-            <div class="performing_card_title">Пошумим блин</div>
-            <div class="performing_card_description">Самый лучший концерт в мире, именно здесь соберутся все известные звёзды мира. Таки как: MrBeast, T-series, Jeffry Epstein и множество других!</div>
-            <div class="performing_card_metadata">
-                <div class="performing_card_date">3.03.2026</div>
-                <div class="performing_card_cost">От 3500р</div>
-            </div>
-            <a class="performing_card_button">Подробнее</a>
-        </div>
-
-        <div class="performing_card_base">
-            <img src="static/images/s2.jpg" alt="Preview image" class="performing_card_image">
-            <div class="performing_card_title">Ееее роо-ок</div>
-            <div class="performing_card_description">Ееееееееееееееееееееееееее роооооооооок</div>
-            <div class="performing_card_metadata">
-                <div class="performing_card_date">Через 3 дня</div>
-                <div class="performing_card_cost">Бесплатно</div>
-            </div>
-            <a class="performing_card_button">Подробнее</a>
-        </div>
-
-        <div class="performing_card_base">
-            <img src="static/images/s3.png" alt="Preview image" class="performing_card_image">
-            <div class="performing_card_title">𓅃𓉔𓇌, 𓇋𓅓 𓎼𓄿𓇌</div>
-            <div class="performing_card_description">𓆑𓇋𓈖𓄿𓃭𓃭𓇌 𓇋 𓎼𓏏 𓃀𓄿𓈖𓈖𓂧!! 𓇌𓅲𓉔. 𓇋𓅓 𓎼𓄿𓇌, 𓇋 𓃭𓆯 𓃀𓇌𓋴</div>
-            <div class="performing_card_metadata">
-                <div class="performing_card_date">Уже идёт</div>
-                <div class="performing_card_cost">от 8000р</div>
-            </div>
-            <a class="performing_card_button">Подробнее</a>
-        </div>
-
+        {% endfor %}
 
     </div>
 
-
-
+    <div class="create_announcement_wrapper">
+        <a href="https://youtube.com" class="create_announcement">Создать анонс!</a>
+    </div>
 </div>
 
 
 <div class="dropping_menu">
+    <a class="dropping_menu_buttons dropping_menu_buttons_pressed" href="/">Главная</a>
     <a class="dropping_menu_buttons" href="/space">Пространство</a>
     <a class="dropping_menu_buttons" href="/poster">Афиша</a>
-    <a class="dropping_menu_buttons" href="/rents">Аренда</a>
     <a class="dropping_menu_buttons" href="/gallery">Галерея</a>
     <a class="dropping_menu_buttons" href="/guests">Гостям</a>
     <a class="dropping_menu_buttons" href="/contacts">Контакты</a>
 </div>
-
 
 
 </body>
