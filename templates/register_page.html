@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+</head>
+<body>
+
+<div class="main_page">
+
+    <div class="register_menu">
+        <div class="register_text">Register</div>
+        <form action="" method="post">
+            <div class="form_input_box">
+                <p>username *</p>
+                <input type="text" name="username" id="username" class="input" required>
+            </div>
+            <div class="form_input_box">
+                <p>nickname</p>
+                <input type="text" name="nickname" id="nickname" class="input">
+            </div>
+            <div class="form_input_box">
+                <p>password *</p>
+                <input type="password" name="password" id="password" class="input" required>
+            </div>
+            <div class="form_input_box">
+                <p>repeat password</p>
+                <input type="password" name="password" id="repeat_password" class="input" required>
+            </div>
+
+            <div class="form_input_box">
+                <p>email</p>
+                <input type="email" name="email" id="email" class="input">
+            </div>
+            <div class="already_have_account_text">Уже есть аккаунт? <a href="login">Войти</a></div>
+            <div class="submit_button_wrapper">
+                <button type="submit" class="submit_button">Отправить</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="upper_menu">
+    <a class="concert_maker_main_name" href="/">Concert maker</a>
+    <div class="user_tablet">
+        {% if userdata.is_placeholder %}
+        <a class="placeholder_login_button" href="login">Login</a>
+        {% else %}
+        <div class="userdata_name">{{userdata.name}}</div>
+        {% endif %}
+        <img class="userdata_photo" src="{{userdata.photo}}">
+    </div>
+</div>
+
+
+</body>
+</html>

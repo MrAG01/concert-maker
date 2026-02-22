@@ -1,10 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <title>Gallery</title>
-    </head>
-    <body>
-        Gallery page
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Space - Галерея</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='gallery.css') }}">
+</head>
+<body>
+<div class="main_page">
+    <h1 class="title">Галерея</h1>
+    <p class="lower_title">Наш прекрасный архив</p>
+    <div class="gallery_container">
+    <div class="gallery_grid">
+        <div class="gallery_item">
+            <img src="{{ url_for('static', filename='images/concert1.jpg') }}" class="gallery_image">
+        </div>
+
+        <div class="gallery_item">
+            <img src="{{ url_for('static', filename='images/concert2.jpg') }}" class="gallery_image">
+        </div>
+
+        <div class="gallery_item">
+            <img src="{{ url_for('static', filename='images/concert4.jpg') }}" class="gallery_image">
+        </div>
+
+        <div class="gallery_item">
+            <img src="{{ url_for('static', filename='images/concert3.jpg') }}" class="gallery_image">
+        </div>
+
+        <div class="gallery_item">
+            <img src="{{ url_for('static', filename='images/s2.jpg') }}" class="gallery_image">
+        </div>
+
+        <div class="gallery_item">
+            <img src="{{ url_for('static', filename='images/concert5.jpg') }}" class="gallery_image">
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="dropping_menu">
+    <a class="dropping_menu_buttons" href="/">Главная</a>
+    <a class="dropping_menu_buttons" href="/space">Пространство</a>
+    <a class="dropping_menu_buttons" href="/poster">Афиша</a>
+    <a class="dropping_menu_buttons dropping_menu_buttons_pressed" href="/gallery">Галерея</a>
+    <a class="dropping_menu_buttons" href="/guests">Гостям</a>
+    <a class="dropping_menu_buttons" href="/contacts">Контакты</a>
+</div>
+
+<div class="upper_menu">
+    <a class="concert_maker_main_name" href="/">Concert maker</a>
+    <div class="user_tablet">
+        {% if userdata.is_placeholder %}
+        <a class="placeholder_login_button" href="login">Login</a>
+        {% else %}
+        <div class="userdata_name">{{userdata.name}}</div>
+        {% endif %}
+        <img class="userdata_photo" src="{{userdata.photo}}">
+    </div>
+</div>
+
+
+</body>
 </html>

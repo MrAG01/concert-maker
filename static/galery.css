@@ -1,0 +1,45 @@
+
+/* Сетка для фото */
+.gallery_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.gallery_item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    background: white;
+    cursor: pointer;
+}
+
+.gallery_item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+}
+
+.gallery_image {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery_item:hover .gallery_image {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
